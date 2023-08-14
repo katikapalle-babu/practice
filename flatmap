@@ -1,0 +1,37 @@
+/*
+a. Write a program that takes a list of lists and flattens it to a single list.
+
+b. Given a list of sentences, create a program that flattens the list and then splits each sentence into a list of words.
+
+  c. Create a program that takes a list of strings and returns a list of characters from those strings, flattened.
+
+  d. Given a list of lists of integers, transform it to a list of integers containing the squares of each number.*/
+//List(1, 2, 3),Optional[Int], List(4, 5, 6), List(7, 8, 9)
+
+package com.globallogic.service
+
+import com.globallogic.client.variables
+
+import java.util.Optional
+
+object result extends App {
+
+  val flat=List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))
+  val flatresult=flat.flatMap(x=>x.map(j=>j+"abc"))
+  println(flatresult)
+  val flat2=List("shobhamn babhu katka plaa lee ")
+  val flat2result=flat2.flatMap(x=>x.split(" "))
+  println(flat2result)
+   val flat3result=flat2.flatMap(x => x.toList)
+  println(flat3result)
+
+  val flat4=flat2.flatMap(x=>x.toList.toSet)
+  println(flat4)
+
+  val flat5result=flat.flatMap(x=>x.map(j=>j*j))
+  println(flat5result)
+
+}
+
+
+

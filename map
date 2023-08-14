@@ -1,0 +1,37 @@
+/*a. Write a program that takes a list of integers and returns a new list containing the squares of the original numbers.
+
+b. Given a list of strings, transform each string to its uppercase version.
+
+c. Create a program that takes a list of words and returns a list of the lengths of those words.
+
+d. Given a list of employee objects, transform it to a list containing only the names of the employees.*/
+
+package com.globallogic.service
+object Main extends App {
+  val originalNumbers = List(1, 2, 3, 4, 5)
+  val squaredNumbers = originalNumbers.map(number => number * number)
+  println(squaredNumbers)
+
+  val strings = List("hello", "world", "scala")
+  val uppercaseStrings = strings.map(str => str.toUpperCase)
+  println(uppercaseStrings) 
+
+  
+  val words = List("apple", "banana", "cherry")
+  val wordLengths = words.map(word => word.length)
+  println(wordLengths) 
+
+
+  case class Employee(name: String, age: Int, department: String)
+  val employees = List(
+    Employee("Alice", 25, "HR"),
+    Employee("Bob", 30, "Engineering"),
+    Employee("Charlie", 28, "Finance")
+  )
+  val employeeNames = employees.map(employee => employee.name)
+  println(employeeNames) 
+}
+
+
+
+
